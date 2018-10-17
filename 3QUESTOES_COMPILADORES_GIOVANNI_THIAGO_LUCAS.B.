@@ -1,0 +1,30 @@
+PARTICIPANTES
+GIOVANNI MALLIA	081160048
+LUCAS BITTENCOURT	081160040
+THIAGO LOPES		081160038
+
+
+ 
+
+1)	Explique a fase de análise léxica.
+R:	O analisador léxico (scanner) lê o fluxo de caracteres que compõem o programa fonte e os agrupa em sequências significativas, chamadas lexemas. Para cada lexema, o scanner produz como saída um token no formato: <nome-token, valor-atributo> que é passada para a fase de análise sintática.
+Em um token, o primeiro componente (nome-token) é um símbolo abstrato que é usado durante a análise sintática, e o segundo componente (valor-atributo) aponta para uma entrada na tabela de símbolos referente a esse token. A informação da entrada da tabela de símbolos é necessária para a análise semântica e para a geração de código.
+
+FASES DE UM COMPILADOR
+
+2)	Qual a diferença entre assembler e assembly?
+R:	Assembly é uma linguagem de programação de baixo nível, na qual há uma correspondência muito forte entre as instruções do programa e as instruções de código de máquina da arquitetura.
+Assembler é o programa montador que transforma as instruções escritas em assembly para um código de máquina realocável.
+Programas grandes normalmente são compilados em partes, de modo que o código de máquina realocável pode ter sido ligado a outros arquivos objeto realocáveis e a arquivos de biblioteca para formar o código que realmente é executado na máquina.
+
+3)	Qual a diferença entre erro de sintaxe e erro semântico?
+R:	Um erro sintático é um caso em que dadas instruções estão mal formuladas, aquilo que comumente chamamos de "erro gramatical". Por exemplo: parênteses que abrem, mas não fecham.
+	Um erro semântico é um caso em que dadas instruções não fazem sentido para o compilador. Por exemplo: dividir um inteiro por uma string.
+Os erros de sintaxe são sempre detectados em tempo de compilação, pois se o compilador não consegue sequer montar uma frase, não pode fazer mais nada com ela.
+Já os semânticos, podem também ser pegos durante a compilação (seja na análise de tipos, na geração de código, ou em outras fases), mas podem também não o ser, e acabarem provocando um erro em tempo de execução.
+REFERÊNCIAS
+
+https://bv4.digitalpages.com.br/?term=Compiladores&searchpage=1&filtro=todos&from=busca&page=11&section=0#/edicao/280 -> COMPILADORES: PRINCÍPIOS, TÉCNICAS E FERRAMENTAS.
+
+https://github.com/danielscarvalho/compilers-quiz/blob/master/Quiz.md -> QUIZ SOBRE COMPILADORES POR DANIEL CARVALHO.
+
